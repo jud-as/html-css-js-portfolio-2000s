@@ -1,3 +1,93 @@
+@font-face {
+    font-family: Karmatic Arcade;
+    src: url(fonts/ka1.ttf);
+}
+@font-face {
+    font-family: Arcade Classic;
+    src: url(fonts/ARCADECLASSIC.TTF);
+}
 *{
     padding: 0;
+    margin: 0;
+    background-color: #AB89AA;
+    text-decoration: none;
+}
+
+/*PALETA DE CORES:
+
+branco: #F6F8F7
+preto: #1C2120
+azul: #2F3356
+*/
+
+header {
+    display: flexbox;
+    position: fixed;
+    width: auto;
+    height: 9.79em;
+    top: 3%;
+    left: 10%;
+    
+}
+
+.sqr-box-top {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    height: auto;
+    width: auto;
+    gap: 1em;
+    margin: 1em;
+    top: 14.3%;
+    left: 36%;
+    justify-content: space-between;
+}
+
+.square {
+    width: 1.7rem;
+    height: 1.7rem;
+    top: auto;
+    background: #2F3356;
+    box-shadow: 10px 8px 0px 0px rgba(28,33,32,1);
+}
+
+.logo h1{
+    position: relative;
+    margin: auto;
+    width: 13.8em;
+    letter-spacing: 4px;
+    font-family: Karmatic Arcade;  
+    font-size: 4.3em;
+    color: #1C2120;
+    
+}
+#ask {
+    position: relative;
+    top: .25em;
+    font-family: Arcade Classic;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px rgba(28,33,32,1);
+}   
+
+.subtitle-box-top {
+    display: block;
+    position: fixed;
+    justify-content: center;
+    top: 16%;
+    left: 13%;
+    width: 27em;
+    height: auto;
+    background-color: #2F3356;
+    box-shadow: 10px 8px 0px 0px rgba(28,33,32,1);
+}
+.subtitle-box-top h2{
+    position: relative;
+    margin: auto;
+    font-size: 25px;
+    font-family: Arcade Classic;
+    font-weight: 400;
+    color: #F6F8F7;
+    word-spacing: 9px;
+    margin-left: 1em;
+    background-color: transparent;
 }
