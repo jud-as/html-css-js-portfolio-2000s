@@ -6,6 +6,8 @@
     font-family: Arcade Classic;
     src: url(fonts/ARCADECLASSIC.TTF);
 }
+
+
 *{
     padding: 0;
     margin: 0;
@@ -17,18 +19,46 @@
 
 branco: #F6F8F7
 preto: #1C2120
-azul: #2F3356
+azul: #2F3356 
+rosa claro: #D6C6E3
 */
 
 header {
     display: flexbox;
     position: fixed;
-    width: auto;
-    height: 9.79em;
+    width: 61.98em;
+    height: 8em;
     top: 3%;
-    left: 10%;
+    left: 9.5%;
+    z-index: 1;
+}
+
+.logo-container {
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: auto; 
+}
+
+.logo h1{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 13.8em;
+    letter-spacing: 4px;
+    font-family: Karmatic Arcade;  
+    font-size: 4.3em;
+    color: #1C2120; 
     
 }
+
+#ask {
+    position: relative;
+    top: .25em;
+    font-family: Arcade Classic;
+    font-size: 1em;
+    text-shadow: 1px 1px 2px rgba(28,33,32,1);
+}   
 
 .sqr-box-top {
     display: flex;
@@ -38,48 +68,59 @@ header {
     width: auto;
     gap: 1em;
     margin: 1em;
-    top: 14.3%;
+    top: 14.1%;
     left: 36%;
     justify-content: space-between;
+    background-color: transparent;
+}
+
+.sqr-box-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    position: static;
+    height: auto;
+    width: 13rem;
+    margin-top: 4%;
+    margin-left: 72.3%;
+    justify-content: center;
+    background-color: transparent;
 }
 
 .square {
-    width: 1.7rem;
-    height: 1.7rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
     top: auto;
     background: #2F3356;
     box-shadow: 10px 8px 0px 0px rgba(28,33,32,1);
 }
 
-.logo h1{
-    position: relative;
-    margin: auto;
-    width: 13.8em;
-    letter-spacing: 4px;
-    font-family: Karmatic Arcade;  
-    font-size: 4.3em;
-    color: #1C2120;
-    
+.square img {
+    position: absolute;
+    max-width: 80%;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-color: #2F3356;
 }
-#ask {
-    position: relative;
-    top: .25em;
-    font-family: Arcade Classic;
-    font-size: 1em;
-    text-shadow: 1px 1px 2px rgba(28,33,32,1);
-}   
 
 .subtitle-box-top {
     display: block;
     position: fixed;
     justify-content: center;
-    top: 16%;
+    top: 15.8%;
     left: 13%;
     width: 27em;
-    height: auto;
+    height: 2rem;
     background-color: #2F3356;
     box-shadow: 10px 8px 0px 0px rgba(28,33,32,1);
+    
 }
+
 .subtitle-box-top h2{
     position: relative;
     margin: auto;
@@ -88,6 +129,71 @@ header {
     font-weight: 400;
     color: #F6F8F7;
     word-spacing: 9px;
-    margin-left: 1em;
+    text-align: center;
     background-color: transparent;
 }
+
+.computer-screen {
+    display: inline-block;
+    position: static;
+    height: 35em;
+    width: 59em;
+    margin-top: 8.2%;
+    margin-left: 10%;    
+}
+.screen-border{
+    display: block;
+    position: static;
+    width: 57.5em;
+    height: 33.5em;
+    border: 1.5rem solid;
+}
+
+#left-border {
+    display: block;
+    position: relative;
+    width: 1.5em;
+    height: 34.85em;
+    bottom: 1.35em;
+    right: 1.5em;
+    background-color: #D6C6E3;
+    box-shadow: 10px 0px 0px 0px rgba(28,33,32,1);
+}
+
+#right-border {
+    display: block;
+    position: relative;
+    width: 1.5em;
+    height: 35.69em;
+    bottom: 37.0em;
+    left: 56.9em;
+    background-color: #D6C6E3;
+    box-shadow: 10px 0px 0px 0px rgba(28,33,32,1);
+}
+
+#upper-border {
+    display: block;
+    position: relative;
+    width: 59.9em;
+    height: 1.35em;
+    bottom: 1.35em;
+    right: 1.5em;
+    background-color: #D6C6E3;
+    box-shadow: 0px 5px 0px rgba(28,33,32,1);
+}
+
+#bottom-border {
+    display: block;
+    position: relative;
+    width: 59.9em;
+    height: 1.4em;
+    bottom: 38.39em;
+    right: 1.5em;
+    background-color: #D6C6E3;
+    box-shadow: 10px 5px 0px rgba(28,33,32,1);
+}
+
+
+
+
+
