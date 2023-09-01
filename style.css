@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: Arcade Classic;
-    src: url(fonts/ARCADECLASSIC.TTF);
+    src: url(fonts/VCR_OSD_MONO_1.001.ttf);
 }
 
 @keyframes wave {
@@ -21,6 +21,16 @@
         text-shadow: 5px 5px 1px #F6F8F7;
     }
 }
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 95% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #F6F8F7; }
+  }
 
 *{
     padding: 0;
@@ -66,7 +76,7 @@ header {
      text-align: center;
       bottom: 20px;
        font-family: Arcade Classic;
-        font-size: 1em;  
+        font-size: .9em;  
 }   
 
 #a { 
@@ -147,8 +157,9 @@ header {
 .subtitle-box-top h2{
     position: relative;
     margin: auto;
-    top: .2rem;
-    font-size: 25px;
+    top: .4rem;
+    text-align: center;
+    font-size: 22px;
     font-family: Arcade Classic;
     font-weight: 400;
     color: #F6F8F7;
@@ -285,8 +296,69 @@ header {
 }
 
 
+footer {
+    position: fixed;
+    background-color: transparent;
+    height: 11em;
+    width: 60.2em;
+    margin-top: 22em;
+    margin-left: 9.5%;
+}
+
+.dialog-box {
+    position: relative;
+    background-color: #D6C6E3;
+    height: 11em;
+    width: 57em;
+    left: 1.5em;
+    transform: skew(-20deg);   
+}
+.d-s-bottom-border-radius {
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-top: 50px solid #D6C6E3;
+    border-right: 50px solid transparent;
+    left: 53.9em;
+    bottom: -.09em;
+}
+
+.dialog-screen {
+    display: block;
+    position: fixed;
+    background-color: #1C2120;
+    height: 7em;
+    width: 48em;
+    transform: skew(20deg); 
+    left: 3em;
+    top: 2em;
+    border: #825471 5px solid;
+}
+
+.dialog-text {
+    position: relative;
+    width: 23.65em;
+    color: #F6F8F7;
+    top: 27%;
+    left: 3%;
+    word-spacing: .01em;
+    background-color: transparent;
+    font-size: 30px; 
+    font-family: Arcade Classic;
+
+    
+    /*dialog animation*/
+    overflow: hidden;
+    border-right: .4rem solid #F6F8F7;
+    animation:  
+    typing 2.5s steps(30, end) 0s,
+    blink-caret .75s step-end infinite;
+    white-space: nowrap;
+    
+    }   
 
 
+    
 
 /*PALETA DE CORES:
 verde claro: #5EBB8E
