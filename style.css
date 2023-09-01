@@ -7,6 +7,20 @@
     src: url(fonts/ARCADECLASSIC.TTF);
 }
 
+@keyframes wave {
+    0% {
+        top: 0;
+        text-shadow: 5px 5px 1px #F6F8F7;
+    }
+    50% {
+        top: 40px;
+        text-shadow: 5px 5px 1px #825471;
+    }
+    100% {
+        top: 0;
+        text-shadow: 5px 5px 1px #F6F8F7;
+    }
+}
 
 *{
     padding: 0;
@@ -15,13 +29,7 @@
     text-decoration: none;
 }
 
-/*PALETA DE CORES:
 
-branco: #F6F8F7
-preto: #1C2120
-azul: #2F3356 
-rosa claro: #D6C6E3
-*/
 
 header {
     display: flexbox;
@@ -32,6 +40,7 @@ header {
     left: 9.5%;
     z-index: 1;
 }
+
 
 .logo-container {
     background-position: center;
@@ -47,18 +56,32 @@ header {
     width: 13.8em;
     letter-spacing: 4px;
     font-family: Karmatic Arcade;  
-    font-size: 4.3em;
+    font-size: 68.8px;
     color: #1C2120; 
-    
 }
+
 
 #ask {
     position: relative;
-    top: .25em;
-    font-family: Arcade Classic;
-    font-size: 1em;
-    text-shadow: 1px 1px 2px rgba(28,33,32,1);
+     text-align: center;
+      bottom: 20px;
+       font-family: Arcade Classic;
+        font-size: 1em;  
 }   
+
+#a { 
+    position: relative;
+    animation: wave .8s ease-in-out infinite alternate; 
+}
+#s {
+    position: relative;
+    animation: wave .8s ease-in-out 0.12s infinite alternate; 
+}
+#k {
+    position: relative;
+    animation: wave .8s ease-in-out 0.24s infinite alternate; 
+}
+
 
 .sqr-box-top {
     display: flex;
@@ -124,6 +147,7 @@ header {
 .subtitle-box-top h2{
     position: relative;
     margin: auto;
+    top: .2rem;
     font-size: 25px;
     font-family: Arcade Classic;
     font-weight: 400;
@@ -136,64 +160,140 @@ header {
 .computer-screen {
     display: inline-block;
     position: static;
-    height: 35em;
-    width: 59em;
+    height: 3em;
+    width: 63em;
     margin-top: 8.2%;
-    margin-left: 10%;    
+    margin-left: 10%;  
+    color: transparent;
 }
 .screen-border{
     display: block;
     position: static;
     width: 57.5em;
     height: 33.5em;
-    border: 1.5rem solid;
+    border: 1.35rem solid;
 }
 
 #left-border {
     display: block;
-    position: relative;
-    width: 1.5em;
-    height: 34.85em;
-    bottom: 1.35em;
-    right: 1.5em;
-    background-color: #D6C6E3;
-    box-shadow: 10px 0px 0px 0px rgba(28,33,32,1);
+     position: relative;
+      width: 1.5em;
+       height: 34.85em;
+        bottom: 1.35em;
+         right: 1.5em;
+          background-color: #D6C6E3;
+           box-shadow: 7px 0px 0px 0px #1C2120;
 }
+
+#left-trapezoid-1 {
+    position: fixed;
+     margin-top: 15.5rem;
+      margin-left: -6.7em;
+       border-bottom: 38px solid #D6C6E3;
+        border-left: 35px solid transparent;
+         border-right: 35px solid transparent;
+          height: 0;
+           width: 130px;
+            transform: rotate(-90deg);
+             background-color: transparent;
+}
+
 
 #right-border {
     display: block;
-    position: relative;
-    width: 1.5em;
-    height: 35.69em;
-    bottom: 37.0em;
-    left: 56.9em;
-    background-color: #D6C6E3;
-    box-shadow: 10px 0px 0px 0px rgba(28,33,32,1);
+     position: relative;
+      width: 1.5em;
+       height: 35.69em;
+        bottom: 37.0em;
+         left: 56.9em;
+          background-color: #D6C6E3;
+           box-shadow: 7px 0px 0px 0px #1C2120;
 }
+
+
+#right-trapezoid-1 {
+    position: fixed;
+     margin-top: 10rem;
+      margin-left: -7.7em;
+       border-bottom: 25px solid #825471;
+        border-left: 35px solid transparent;
+         border-right: 35px solid transparent;
+          height: 0;
+           width: 260px;
+            transform: rotate(90deg);
+             background-color: transparent;
+              filter: drop-shadow(10px -5px 0px #1C2120);
+}
+#right-trapezoid-2 {
+    position: fixed;
+     margin-top: 20rem;
+      margin-left: -3.6em;
+       border-bottom: 38px solid #D6C6E3;
+        border-left: 35px solid transparent;
+         border-right: 35px solid transparent;
+          height: 0;
+           width: 130px;
+            transform: rotate(90deg);
+             background-color: transparent;
+              filter: drop-shadow(5px -5px 0px #1C2120);
+}
+
+#right-inner-border {
+    position: fixed;
+     margin-top: 28em;
+      margin-left: 0;
+       background: transparent;
+        border-radius: 30%;
+         width: 75px;
+          height: 75px;
+           border: 1.35rem solid;
+            color: #D6C6E3;
+            box-shadow: 5px 5px 0px #1C2120;
+              z-index: -1;
+}
+
+#right-inner-screen {
+     margin-top: auto;
+      margin-left: 0;
+       width: 75px;
+        height: 75px;
+         background-image: linear-gradient(to right, #5ABEC7, #5EBB8E);
+          box-shadow: 0px -5px 0px #1C2120;
+}
+
 
 #upper-border {
     display: block;
-    position: relative;
-    width: 59.9em;
-    height: 1.35em;
-    bottom: 1.35em;
-    right: 1.5em;
-    background-color: #D6C6E3;
-    box-shadow: 0px 5px 0px rgba(28,33,32,1);
+     position: relative;
+      width: 59.9em;
+       height: 1.35em;
+        bottom: 1.35em;
+         right: 1.5em;
+          background-color: #D6C6E3;
+           box-shadow: 0px 5px 0px #1C2120;
 }
 
 #bottom-border {
     display: block;
-    position: relative;
-    width: 59.9em;
-    height: 1.4em;
-    bottom: 38.39em;
-    right: 1.5em;
-    background-color: #D6C6E3;
-    box-shadow: 10px 5px 0px rgba(28,33,32,1);
+     position: relative;
+      width: 59.9em;
+       height: 1.4em;
+        bottom: 38.39em;
+         right: 1.5em;
+          background-color: #D6C6E3;
+           box-shadow: 7px 5px 0px #1C2120;
 }
 
 
 
 
+
+/*PALETA DE CORES:
+verde claro: #5EBB8E
+branco: #F6F8F7
+preto: #1C2120
+azul: #2F3356 
+rosa claro: #D6C6E3
+rosa escuro: #825471
+*/
 
