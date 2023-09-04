@@ -9,7 +9,7 @@
 @keyframes wave {
     0% {
         top: 0;
-        text-shadow: 5px 5px 1px #825471;
+        text-shadow: 5px 5px 1px none;
     }
     50% {
         top: 40px;
@@ -54,25 +54,20 @@
     }
 }
 
-@keyframes close-popup {
-    0% {
-        height: 100% ;
-    }
-    
-    100% {
-        height: 0% ;
-    }
+.transition-height {
+    transition: height 0.2s ease; 
 }
-
 
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     background-color: #AB89AA;
     text-decoration: none;
 }
 
 p {
+    font-family: Arcade Classic;
     background-color: transparent;
     font-weight: 200;
 }
@@ -81,6 +76,15 @@ h4 {
     font-weight: 200;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+button:hover{
+    filter: brightness(70%);
+}
 
 header {
     display: flexbox;
@@ -98,7 +102,7 @@ header {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     margin-left: 2.5%;
-    margin-top: 5px;
+    margin-top: -.8em;
     z-index: 0;
     
 }
@@ -109,22 +113,24 @@ header {
     background-color: #2F3356;
     height: 2em;
     width: 55em;
-    bottom: 1.25em;
+    bottom: .25em;
     left: .35em;
     border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     box-shadow: 5px 8px 0px #1C2120;
-    
 }
 
-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
+.popup-bar p {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    color: #F6F8F7;
+    top: 25%;
+    left: 2.5%;
+    letter-spacing: 2px;
 }
 
-button:hover{
-    filter: brightness(80%);
-}
 
 #popup-close-button {
     box-sizing: border-box;
@@ -136,7 +142,7 @@ button:hover{
     border: 2px solid #1C2120;
     border-radius: 5px;
     left: 96%;
-    top: .3rem;
+    top: -.6rem;
     background-color: #FF5471;
     
 }
@@ -165,12 +171,12 @@ button:hover{
     position: relative;
     box-sizing: border-box;
     transform: scale(var(--ggs,1));
-    transform: scale(1.25) rotate(90deg);
+    transform: scale(1.15) rotate(90deg);
     width: 14px;
     height: 14px;
     background-color: transparent;
-    left: 92.8%;
-    bottom: 35%;
+    left: 93.5%;
+    top: -1.7rem;
     color: #ffffff;
 }
 
@@ -197,8 +203,8 @@ button:hover{
 
 #popup-minimize-button {
     transform: scale(var(--ggs,1));
-    bottom: 85%;
-    left: 87.8%;
+    top: -2.5rem;
+    left: 89.5%;
     background-color: transparent;
     color: #F6F8F7;
 }
@@ -207,7 +213,7 @@ button:hover{
     box-sizing: border-box;
     position: relative;
     display: block;
-    width: 20px;
+    width: 17px;
     height: 17px;
 }
 #popup-minimize-button::before {
@@ -222,17 +228,16 @@ button:hover{
     position: relative;
     background-position: center;
     background-size: cover;
-    width: 55em;
+    width: auto;
     height: 6em;
     background-color: #F6F8F7; 
     box-shadow: 5px 5px 0px #1C2120;
-    bottom: 1.3em;
+    bottom: 2.3em;
     left: 0;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
-    animation: close-popup .3s ease forwards;
     overflow: hidden;
+    
 }
 
 .logo h1{
@@ -300,7 +305,7 @@ button:hover{
     position: static;
     height: auto;
     width: 13rem;
-    margin-top: 8.25%;
+    margin-top: 10.1%;
     margin-left: 72.3%;
     justify-content: center;
     background-color: transparent;
@@ -384,7 +389,7 @@ button:hover{
 #left-trapezoid-1 {
     position: fixed;
      margin-top: 15.5rem;
-      margin-left: -6.7em;
+      margin-left: -5em;
        border-bottom: 38px solid #D6C6E3;
         border-left: 35px solid transparent;
          border-right: 35px solid transparent;
@@ -410,7 +415,7 @@ button:hover{
 #right-trapezoid-1 {
     position: fixed;
      margin-top: 10rem;
-      margin-left: -7.7em;
+      margin-left: -5.75em;
        border-bottom: 25px solid #825471;
         border-left: 35px solid transparent;
          border-right: 35px solid transparent;
@@ -423,7 +428,7 @@ button:hover{
 #right-trapezoid-2 {
     position: fixed;
      margin-top: 20rem;
-      margin-left: -3.6em;
+      margin-left: -1.5em;
        border-bottom: 38px solid #D6C6E3;
         border-left: 35px solid transparent;
          border-right: 35px solid transparent;
@@ -437,14 +442,14 @@ button:hover{
 #right-inner-border {
     position: fixed;
      margin-top: 28em;
-      margin-left: 0;
+      margin-left: 0%;
        background: transparent;
         border-radius: 30%;
-         width: 75px;
-          height: 75px;
+         width: 7em;
+          height: 7em;
            border: 1.35rem solid;
             color: #D6C6E3;
-            box-shadow: 5px 5px 0px #1C2120;
+             box-shadow: 5px 5px 0px #1C2120;
               z-index: -1;
 }
 
@@ -541,7 +546,7 @@ aside {
     border: 1px solid #1C2120;
 
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
     color: #F6F8F7;
     font-weight: 600;
     font-size: 22px;
@@ -603,7 +608,7 @@ aside {
 .semblance-box-right-trapeze {
     position: absolute;
      margin-top: 11rem;
-      margin-left: 13.3em;
+      margin-left: 14.25em;
        border-bottom: 25px solid #825471;
         border-left: 15px solid transparent;
          border-right: 20px solid transparent;
