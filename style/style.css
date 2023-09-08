@@ -6,53 +6,7 @@
     font-family: Arcade Classic;
     src: url(fonts/VCR_OSD_MONO_1.001.ttf);
 }
-@keyframes wave {
-    0% {
-        top: 0;
-        text-shadow: 5px 5px 1px none;
-    }
-    50% {
-        top: 40px;
-        text-shadow: 5px 5px 1px #565b85;
-    }
-    100% {
-        top: 0;
-        text-shadow: 5px 5px 1px #FF5471;
-    }
-}
-@keyframes typing {
-    from { width: 0 }
-    to { width: 95% }
-}
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #F6F8F7; }
-}
-@keyframes color-gradient {
-    0% {
-        background-color: #AB89AA;
-    }
-    50% {
-        background-color: #5EBB8E;
-    }
-    100%{
-        background-color: #AB89AA;
-    }
-}
-@keyframes floating {
-    0% {
-        transform: translate(0px, -2px) ;
-    }
-    
-    
-    50% {
-        transform: translate(0px, -8px) ;
-    }
-    
-    100% {
-        transform: translate(0px, -2px) ;
-    }
-}
+
 
 .transition-height {
     transition: height 0.2s ease; 
@@ -519,6 +473,8 @@ aside {
     border: #1C2120 solid 1px;
 }
 
+
+
 .semblance-box-text {
     display: flex;
     flex-direction: column;
@@ -674,7 +630,7 @@ footer {
     border: #825471 5px solid;
 }
 
-.dialog-text {
+#dialog-text {
     position: relative;
     width: 23.65em;
     color: #F6F8F7;
@@ -725,6 +681,70 @@ footer {
     background-color: #2F3356;
     box-shadow: 2px 2px 0#1C2120;
     z-index: 1;
+}
+
+/*TV SCREEN*/
+
+#crt:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 8px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.scanline {
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(255, 255, 255, 0.2) 10%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 10s linear infinite;
+}
+
+#monitor {
+    
+    width: 60.26em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    margin-top: -3.5em;
+    margin-left: 11.5em;
+}
+#monitor:not(.off) {
+	box-shadow: 0.6px 90px 110px -60px var(--bg); /* screen glow */
+}
+
+#screen {
+    position: relative;
+    width: 100%;
+    height: 63.5vmin;
+    border: 30px solid transparent;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#screenColor {
+    width: 100%;
+    height: 100%;
+    background-color: #565b85;
 }
 /*PALETA DE CORES:
 verde claro: #5EBB8E

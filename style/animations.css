@@ -1,0 +1,70 @@
+@keyframes wave {
+    0% {
+        top: 0;
+        text-shadow: 5px 5px 1px none;
+    }
+    50% {
+        top: 40px;
+        text-shadow: 5px 5px 1px #565b85;
+    }
+    100% {
+        top: 0;
+        text-shadow: 5px 5px 1px #FF5471;
+    }
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 95% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #F6F8F7; }
+}
+@keyframes color-gradient {
+    0% {
+        background-color: #AB89AA;
+    }
+    50% {
+        background-color: #5EBB8E;
+    }
+    100%{
+        background-color: #AB89AA;
+    }
+}
+@keyframes floating {
+    0% {
+        transform: translate(0px, -2px) ;
+    }
+    
+    
+    50% {
+        transform: translate(0px, -8px) ;
+    }
+    
+    100% {
+        transform: translate(0px, -2px) ;
+    }
+}
+@keyframes textShadow {
+    0% {
+      text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    }
+    5% {
+      text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+    }
+    
+  }
+  @keyframes scanline {
+    0% {
+        bottom: 100%;
+        opacity: 0.5;
+    }
+    80% {
+        bottom: 100%;
+        opacity: 0.5;
+    }
+    100% {
+        bottom: 0%;
+        opacity: 0;
+    }
+}
